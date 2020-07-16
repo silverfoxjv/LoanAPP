@@ -30,6 +30,6 @@ create table LN_PAYMENT(
     paymentDate date not null,
     paymentMonth int not null,
     capitalPaid DECIMAL(13,2) null,
-    interestedPaid DECIMAL(13,2) null,
+    interestPaid DECIMAL(13,2) null,
     FOREIGN KEY (contractId) references LN_CONTRACT(id)
 );

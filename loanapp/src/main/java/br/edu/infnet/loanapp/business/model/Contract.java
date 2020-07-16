@@ -11,7 +11,7 @@ public class Contract implements Serializable {
 
 	private Customer customer;
 
-	// private Collector collector;
+	private Collector collector;
 
 	private Date startDate;
 
@@ -77,6 +77,14 @@ public class Contract implements Serializable {
 
 	public void setLoanPaymentAmountDate(final Date loanPaymentAmountDate) {
 		this.loanPaymentAmountDate = loanPaymentAmountDate;
+	}
+
+	public Collector getCollector() {
+		return this.collector;
+	}
+
+	public void setCollector(final Collector collector) {
+		this.collector = collector;
 	}
 
 }

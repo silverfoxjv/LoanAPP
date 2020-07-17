@@ -10,7 +10,11 @@
 </head>
 
 <body class="text-center">
-    <form class="form-signin">
+    <form class="form-signin" 
+		action="${pageContext.request.contextPath}/login"
+		modelAttribute="loginFormData" 
+		method="post">
+
         <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72"
             height="72">
 
@@ -20,18 +24,19 @@
         <input type="number" 
 			id="inputEmail" 
 			class="form-control" 
-			placeholder="Código do Cliente" 
+			placeholder="Código do Cliente"
+			name="customerCode" 
 			required autofocus> 
 		<label for="inputPassword" class="sr-only">Password</label>
 
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
 
 		<div class="form-check form-check-inline mt-2 mb-2">
-			<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+			<input class="form-check-input" type="radio" name="clientType" id="inlineRadio1" value="1">
 			<label class="form-check-label" for="inlineRadio1">Cliente</label>
 		</div>
 		<div class="form-check form-check-inline mt-2 mb-2">
-			<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+			<input class="form-check-input" type="radio" name="clientType" id="inlineRadio2" value="2">
 			<label class="form-check-label" for="inlineRadio2">Coletor</label>
 		</div>
 

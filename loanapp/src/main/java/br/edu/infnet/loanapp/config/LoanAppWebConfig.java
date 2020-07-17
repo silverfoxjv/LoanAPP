@@ -13,7 +13,7 @@ public class LoanAppWebConfig {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addViewControllers(final ViewControllerRegistry registry) {
-				registry.addViewController("/").setViewName("forward:/WEB-INF/views/index.jsp");
+				registry.addViewController("/").setViewName("forward:/WEB-INF/views/pages/login/login.jsp");
 			}
 		};
 	}

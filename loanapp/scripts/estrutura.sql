@@ -1,3 +1,4 @@
+drop database if exists LoanAmountApp;
 create database LoanAmountApp;
 use LoanAmountApp;
 create table LN_CUSTOMER(

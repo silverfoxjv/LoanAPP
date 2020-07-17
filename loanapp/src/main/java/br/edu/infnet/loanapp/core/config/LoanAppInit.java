@@ -1,4 +1,4 @@
-package br.edu.infnet.loanapp.config;
+package br.edu.infnet.loanapp.core.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

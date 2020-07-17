@@ -1,4 +1,4 @@
-package br.edu.infnet.loanapp.controller;
+package br.edu.infnet.loanapp.core.controller;
 
 import org.springframework.stereotype.Controller;
 

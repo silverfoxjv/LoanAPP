@@ -33,8 +33,9 @@ public class LoginController {
 			return modelAndView;
 		}
 		final String mensagem = "Deu erro no login";
-		model.addAttribute("mensagem", mensagem);
+		model.addAttribute("message", mensagem);
 		return new ModelAndView(URLConsts.getLoginPath());
+
 	}
 
 }

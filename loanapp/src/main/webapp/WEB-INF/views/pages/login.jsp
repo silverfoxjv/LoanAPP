@@ -10,7 +10,7 @@
 <link href="css/login.css" rel="stylesheet">
 </head>
 
-<body class="text-center">
+<body class="text-center bg-dark">
 	<div class="container">
 		<div class="row">
 			<div class="col-md">

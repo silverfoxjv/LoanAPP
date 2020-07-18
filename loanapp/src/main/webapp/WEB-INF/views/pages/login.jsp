@@ -11,9 +11,9 @@
 </head>
 
 <body class="text-center bg-dark">
-	<div class="container">
-		<div class="row">
-			<div class="col-md">
+	<div class="container center-login">
+		<div class="row justify-content-md-center">
+			<div class="col-md-auto">
 				<form class="form-signin" action="${pageContext.request.contextPath}/login" modelAttribute="loginFormData" method="post">
 
 					<div class="card shadow" style="width: 18rem;">

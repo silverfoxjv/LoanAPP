@@ -11,7 +11,21 @@
 </head>
 
 <body class="text-center bg-dark">
-	<div class="container">
+	
+	<nav class="navbar navbar-light bg-light">
+	  <a class="navbar-brand" href="#">
+	    <span class="fa-stack fa-2x"> 
+			<i class="fas fa-circle fa-stack-2x"></i> 
+			<i class="fas fa-hand-holding-usd fa-stack-1x fa-inverse"></i>
+		</span>
+	    LoanAPP
+	  </a>
+	  
+	  <a class="btn btn-sm"><i class="fas fa-sign-out-alt fa-2x"></i></a>
+	</nav>
+	
+	<div class="container center-payment">
+		
 		<div class="row">
 			<div class="col-md">
 				<form class="form-signin"
@@ -20,32 +34,27 @@
 
 					<div class="card shadow" style="width: 18rem;">
 						<div class="card-body">
-							<span class="fa-stack fa-2x"> <i
-								class="fas fa-circle fa-stack-2x"></i> <i
-								class="fas fa-hand-holding-usd fa-stack-1x fa-inverse"></i>
+							<span class="fa-stack fa-2x"> 
+								<i class="fas fa-circle fa-stack-2x"></i> 
+								<i class="fas fa-donate fa-stack-1x fa-inverse"></i>
 							</span>
 
 							<div class="h3 mb-4 font-weight-normal">Pagamento</div>
 
 							<div class="text-left h6 mb-3 font-weight-normal">Código do Contrato</div>
-							<label for="inputContractId" class="sr-only">Código do
-								contrato</label> <input type="number" id="inputContractId"
-								class="mb-3 form-control" placeholder="0" required
-								autofocus> 
+							<label for="inputContractId" class="sr-only">Código do contrato</label> 
+							<input type="number" id="inputContractId" class="mb-3 form-control" placeholder="0" required autofocus> 
 								
-								<div class="text-left h6 mb-3 font-weight-normal">Valor do Capital Pago</div>
-							<label for="inputCapitalPaid" class="sr-only">Valor
-								de Capital</label> <input type="number" id="inputCapitalPaid" min="0" value="0" step="any"
-								class="mb-3 form-control" placeholder="00.00" required autofocus>
+							<div class="text-left h6 mb-3 font-weight-normal">Valor do Capital Pago</div>
+							<label for="inputCapitalPaid" class="sr-only">Valor de Capital</label> 
+							<input type="number" id="inputCapitalPaid" min="0" value="0" step="any" class="mb-3 form-control" placeholder="00.00" required autofocus>
 
 							<div class="text-left h6 mb-3 font-weight-normal">Valor do Juros Pago</div>
-							<label for="inputInterestPaid" class="sr-only">Valor de
-								Juros</label> <input type="number" id="inputInterestPaid" min="0" value="0" step="any"
-								class="mb-3 form-control" placeholder="00.00" required autofocus>
+							<label for="inputInterestPaid" class="sr-only">Valor de Juros</label> 
+							<input type="number" id="inputInterestPaid" min="0" value="0" step="any" class="mb-3 form-control" placeholder="00.00" required autofocus>
 
 
-							<button class="btn btn-sm btn-outline-dark btn-block mt-3"
-								type="submit">Confirmar</button>
+							<button class="btn btn-sm btn-outline-dark btn-block mt-3" type="submit">Confirmar</button>
 
 							<label id="alertMessage" class="sr-only">${message}</label>
 
@@ -62,6 +71,8 @@
 			</div>
 		</nav>
 	</div>
+	
+	<script src="component/alert/alert.component.js"></script>
 </body>
 
 </html>

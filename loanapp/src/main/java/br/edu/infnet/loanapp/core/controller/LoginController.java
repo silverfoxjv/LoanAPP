@@ -22,7 +22,7 @@ public class LoginController {
 	@Autowired
 	private LoginService loginService;
 
-	@PostMapping()
+	@PostMapping
 	public ModelAndView logar(@ModelAttribute("loginFormData") final LoginDTO loginDto, final Model model) {
 
 		final Optional<Client> optClient = this.loginService.doLogin(loginDto);

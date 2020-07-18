@@ -26,18 +26,18 @@
 							<div class="h3 mb-3 font-weight-normal">Bem vindo Cliente/Coletor</div>
 
 							<label for="inputEmail" class="sr-only">Código do cliente</label>
-							<input type="number" id="inputEmail" class="form-control" placeholder="Código do Cliente" required autofocus>
+							<input type="number" id="inputEmail" class="form-control" placeholder="Código do Cliente" name="customerCode" required autofocus>
 							 
 							<label for="inputPassword" class="sr-only">Password</label> 
-							<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+							<input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
 
 							<div class="form-check form-check-inline mt-2 mb-2">
-								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked> 
+								<input class="form-check-input" type="radio" name="clientType" id="inlineRadio1" value="1" checked> 
 								<label class="form-check-label" for="inlineRadio1">Cliente</label>
 							</div>
 							
 							<div class="form-check form-check-inline mt-2 mb-2">
-								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+								<input class="form-check-input" type="radio" name="clientType" id="inlineRadio2" value="2">
 								<label class="form-check-label" for="inlineRadio2">Coletor</label>
 							</div>
 

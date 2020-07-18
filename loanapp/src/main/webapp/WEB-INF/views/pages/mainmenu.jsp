@@ -6,7 +6,6 @@
 <jsp:include page="../templates/head.jsp"></jsp:include>
 </head>
 <body class="bg-dark">
-
 	<nav class="navbar navbar-light bg-light">
 	  <a class="navbar-brand" href="#">
 	    <span class="fa-stack fa-2x"> 

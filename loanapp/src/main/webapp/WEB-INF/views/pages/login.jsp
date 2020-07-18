@@ -43,10 +43,7 @@
 		<button class="btn btn-lg btn-primary btn-block mt-3" type="submit">Logar</button>
 		<p class="mt-5 mb-3 text-muted">&copy; 2020</p>
 
-		<label id="alertMessage" class="sr-only">sadasdasd</label>
-
-
-
+		<label id="alertMessage" class="sr-only">${message}</label>
 
 	</form>
 

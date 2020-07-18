@@ -14,9 +14,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md">
-				<form class="form-signin"
-					action="${pageContext.request.contextPath}/login"
-					modelAttribute="loginFormData" method="post">
+				<form class="form-signin" action="${pageContext.request.contextPath}/login" modelAttribute="loginFormData" method="post">
 
 					<div class="card shadow" style="width: 18rem;">
 						<div class="card-body">
@@ -25,8 +23,7 @@
 								class="fas fa-hand-holding-usd fa-stack-1x fa-inverse"></i>
 							</span>
 
-							<div class="h3 mb-3 font-weight-normal">Bem vindo
-								Cliente/Coletor</div>
+							<div class="h3 mb-3 font-weight-normal">Bem vindo Cliente/Coletor</div>
 
 							<label for="inputEmail" class="sr-only">Código do cliente</label>
 							<input type="number" id="inputEmail" class="form-control" placeholder="Código do Cliente" required autofocus>
@@ -50,19 +47,19 @@
 							
 						</div>
 					</div>
+				
 				</form>
 			</div>
+			
 			<nav class="navbar fixed-bottom navbar-light bg-light">
 				<div class="row">
 					<div class="col-md">
 						<small class="mt-5 mb-3 text-muted">&copy; LoanAPP 2020</small>
 					</div>
 				</div>
-			</nav>
+			</nav>			
 		</div>
-
-	</form>
-
+	</div>
 
 	<script src="component/alert/alert.component.js"></script>
 	<script src="js/login.js"></script>

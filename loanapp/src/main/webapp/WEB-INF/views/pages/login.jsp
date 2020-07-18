@@ -18,9 +18,9 @@
 
 					<div class="card shadow" style="width: 18rem;">
 						<div class="card-body">
-							<span class="fa-stack fa-2x"> <i
-								class="fas fa-circle fa-stack-2x"></i> <i
-								class="fas fa-hand-holding-usd fa-stack-1x fa-inverse"></i>
+							<span class="fa-stack fa-2x"> 
+								<i class="fas fa-circle fa-stack-2x"></i> 
+								<i class="fas fa-hand-holding-usd fa-stack-1x fa-inverse"></i>
 							</span>
 
 							<div class="h3 mb-3 font-weight-normal">Bem vindo Cliente/Coletor</div>

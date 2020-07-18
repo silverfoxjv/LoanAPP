@@ -47,3 +47,14 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
+.modal-content {
+	width: 96% !important;
+	border-color: #ccc;
+}
+
+.close{
+	color: #fff !important;
+    text-shadow: 0 0 0 #fff !important;
+    opacity: 1  !important;
+}

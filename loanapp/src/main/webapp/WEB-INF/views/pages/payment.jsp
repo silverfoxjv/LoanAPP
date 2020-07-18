@@ -57,7 +57,6 @@
 							<button class="btn btn-sm btn-outline-dark btn-block mt-3" type="submit">Confirmar</button>
 
 							<label id="alertMessage" class="sr-only">${message}</label>
-
 						</div>
 					</div>
 				</form>

@@ -14,22 +14,27 @@ public class FunctionalityDTO implements Serializable {
 
 	private ClientType clientType;
 
+	private boolean enabled;
+
 	private FunctionalityDTO() {
 		super();
 	}
 
-	private FunctionalityDTO(final String route, final String name, final ClientType clientType) {
+	private FunctionalityDTO(final String route, final String name, final ClientType clientType,
+			final boolean enabled) {
 		super();
 		this.route = route;
 		this.name = name;
 		this.clientType = clientType;
+		this.enabled = enabled;
 	}
 
 	public static FunctionalityDTO newInstance(//
 			final String route, //
 			final String name, //
-			final ClientType clientType) {
-		return new FunctionalityDTO(route, name, clientType);
+			final ClientType clientType, //
+			final boolean enabled) {
+		return new FunctionalityDTO(route, name, clientType, enabled);
 	}
 
 	public String getRoute() {
@@ -56,9 +61,18 @@ public class FunctionalityDTO implements Serializable {
 		this.clientType = clientType;
 	}
 
+	public boolean isEnabled() {
+		return this.enabled;
+	}
+
+	public void setEnabled(final boolean enabled) {
+		this.enabled = enabled;
+	}
+
 	@Override
 	public String toString() {
-		return String.format("FuncionalidadeDTO [route=%s, name=%s]", this.route, this.name);
+		return String.format("FunctionalityDTO [route=%s, name=%s, clientType=%s, enabled=%s]", this.route, this.name,
+				this.clientType, this.enabled);
 	}
 
 }

@@ -45,6 +45,20 @@ public enum ClientType {
 		return null;
 	}
 
+	public static ClientType getFromClientInstance(final Client client) {
+		ClientType clientType = null;
+		if (client != null) {
+			if (client instanceof Collector) {
+				clientType = ClientType.COLLECTOR;
+			}
+			if (client instanceof Customer) {
+				clientType = ClientType.CUSTOMER;
+			}
+		}
+
+		return clientType;
+	}
+
 	public abstract Client getNewInstace();
 
 }

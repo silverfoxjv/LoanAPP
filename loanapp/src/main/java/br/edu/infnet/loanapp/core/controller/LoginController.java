@@ -32,7 +32,7 @@ public class LoginController {
 			modelAndView.addObject("clientSession", optClient.get());
 			return modelAndView;
 		}
-		final String mensagem = "Deu erro no login";
+		final String mensagem = "Login/Senha inválidos";
 		model.addAttribute("message", mensagem);
 		return new ModelAndView(URLConsts.getLoginPath());
 

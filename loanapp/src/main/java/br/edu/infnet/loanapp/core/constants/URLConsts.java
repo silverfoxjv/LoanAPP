@@ -5,6 +5,8 @@ public class URLConsts {
 	private static final String MAIN_MENU_PATH = "/mainmenu";
 
 	private static final String LOGIN_PATH = "/login";
+	
+	private static final String PAYMENT_PATH = "/payment";
 
 	private URLConsts() {
 		super();
@@ -16,6 +18,10 @@ public class URLConsts {
 
 	public static String getLoginPath() {
 		return LOGIN_PATH;
+	}
+	
+	public static String getPaymentPath() {
+		return PAYMENT_PATH;
 	}
 
 }

@@ -16,6 +16,10 @@ html, body {
     height: 70%;
 }
 
+.center-contract {
+    height: 90%;
+}
+
 /*
 body {
   display: -ms-flexbox;
@@ -64,11 +68,26 @@ body {
 
 .modal-content {
 	width: 100% !important;
-	border-color: #ccc;
+	
+}
+
+.close-dark{
+	color: #343a40 !important;
+}
+
+.close-white{
+	color: #fff !important;
 }
 
 .close{
-	color: #fff !important;
     text-shadow: 0 0 0 #fff !important;
     opacity: 1  !important;
+}
+
+.modal-body{
+	padding: 0rem;
+}
+
+.table{
+	margin-bottom: 0rem !important;
 }

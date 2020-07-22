@@ -28,17 +28,17 @@ public class Payment implements Serializable {
 
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(//
-			name = "contractId", //
+			name = "installmentId", //
 			referencedColumnName = "id", //
 			nullable = false)
-	private Contract contract;
+	private Installment installment;
 
 	@Column(name = "paymentDate", nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date paymentDate;
 
-	@Column(name = "paymentMonth", nullable = false)
-	private int paymentMonth;
+	@Column(name = "installmentNbr", nullable = false)
+	private int installmentNbr;
 
 	@Column(name = "capitalPaid", nullable = true)
 	private double capitalPaid;
@@ -52,16 +52,16 @@ public class Payment implements Serializable {
 
 	public Payment(//
 			final int id, //
-			final Contract contract, //
+			final Installment installment, //
 			final Date paymentDate, //
-			final int paymentMonth, //
+			final int installmentNbr, //
 			final double capitalPaid, //
 			final double interestPaid) {
 		super();
 		this.id = id;
-		this.contract = contract;
+		this.installment = installment;
 		this.paymentDate = paymentDate;
-		this.paymentMonth = paymentMonth;
+		this.installmentNbr = installmentNbr;
 		this.capitalPaid = capitalPaid;
 		this.interestPaid = interestPaid;
 	}
@@ -74,12 +74,12 @@ public class Payment implements Serializable {
 		this.id = id;
 	}
 
-	public Contract getContract() {
-		return this.contract;
+	public Installment getInstallment() {
+		return this.installment;
 	}
 
-	public void setContract(final Contract contract) {
-		this.contract = contract;
+	public void setInstallment(final Installment installment) {
+		this.installment = installment;
 	}
 
 	public Date getPaymentDate() {
@@ -90,12 +90,12 @@ public class Payment implements Serializable {
 		this.paymentDate = paymentDate;
 	}
 
-	public int getPaymentMonth() {
-		return this.paymentMonth;
+	public int getInstallmentNbr() {
+		return this.installmentNbr;
 	}
 
-	public void setPaymentMonth(final int paymentMonth) {
-		this.paymentMonth = paymentMonth;
+	public void setInstallmentNbr(final int installmentNbr) {
+		this.installmentNbr = installmentNbr;
 	}
 
 	public double getCapitalPaid() {
@@ -117,8 +117,8 @@ public class Payment implements Serializable {
 	@Override
 	public String toString() {
 		return String.format(
-				"Payment [id=%s, contract=%s, paymentDate=%s, paymentMonth=%s, capitalPaid=%s, interestPaid=%s]",
-				this.id, this.contract, this.paymentDate, this.paymentMonth, this.capitalPaid, this.interestPaid);
+				"Payment [id=%s, installment=%s, paymentDate=%s, installmentNbr=%s, capitalPaid=%s, interestPaid=%s]",
+				this.id, this.installment, this.paymentDate, this.installmentNbr, this.capitalPaid, this.interestPaid);
 	}
 
 	@Override
@@ -128,12 +128,12 @@ public class Payment implements Serializable {
 		long temp;
 		temp = Double.doubleToLongBits(this.capitalPaid);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
-		result = prime * result + ((this.contract == null) ? 0 : this.contract.hashCode());
+		result = prime * result + ((this.installment == null) ? 0 : this.installment.hashCode());
 		result = prime * result + this.id;
 		temp = Double.doubleToLongBits(this.interestPaid);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		result = prime * result + ((this.paymentDate == null) ? 0 : this.paymentDate.hashCode());
-		result = prime * result + this.paymentMonth;
+		result = prime * result + this.installmentNbr;
 		return result;
 	}
 
@@ -152,11 +152,11 @@ public class Payment implements Serializable {
 		if (Double.doubleToLongBits(this.capitalPaid) != Double.doubleToLongBits(other.capitalPaid)) {
 			return false;
 		}
-		if (this.contract == null) {
-			if (other.contract != null) {
+		if (this.installment == null) {
+			if (other.installment != null) {
 				return false;
 			}
-		} else if (!this.contract.equals(other.contract)) {
+		} else if (!this.installment.equals(other.installment)) {
 			return false;
 		}
 		if (this.id != other.id) {
@@ -170,7 +170,7 @@ public class Payment implements Serializable {
 				return false;
 		} else if (!this.paymentDate.equals(other.paymentDate)) {
 			return false;
-		} else if (this.paymentMonth != other.paymentMonth) {
+		} else if (this.installmentNbr != other.installmentNbr) {
 			return false;
 		}
 		return true;

@@ -46,6 +46,26 @@ public class Payment implements Serializable {
 	@Column(name = "interestPaid", nullable = true)
 	private double interestPaid;
 
+	public Payment() {
+		super();
+	}
+
+	public Payment(//
+			final int id, //
+			final Contract contract, //
+			final Date paymentDate, //
+			final int paymentMonth, //
+			final double capitalPaid, //
+			final double interestPaid) {
+		super();
+		this.id = id;
+		this.contract = contract;
+		this.paymentDate = paymentDate;
+		this.paymentMonth = paymentMonth;
+		this.capitalPaid = capitalPaid;
+		this.interestPaid = interestPaid;
+	}
+
 	public int getId() {
 		return this.id;
 	}

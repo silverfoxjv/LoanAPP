@@ -19,8 +19,8 @@ create table LN_CONTRACT(
     startDate date not null,
     interestRate DECIMAL(13,2) not null,
     loanAmount DECIMAL(13,2) not null,
+    installments int not null,
     loanPmentAmountDue DECIMAL(13,2) not null,
-    loanPmentAmountDate date not null,
     FOREIGN KEY (customerId) references LN_CUSTOMER(id),
     FOREIGN KEY (collectorId) references LN_COLLECTOR(id)
 );
@@ -29,8 +29,17 @@ create table LN_PAYMENT(
     id int primary key AUTO_INCREMENT,
     contractId int not null,
     paymentDate date not null,
-    paymentMonth int not null,
+    installmentNbr int not null,
     capitalPaid DECIMAL(13,2) null,
     interestPaid DECIMAL(13,2) null,
     FOREIGN KEY (contractId) references LN_CONTRACT(id)
+);
+
+create table LN_INSTALLMENT(
+	id int primary key AUTO_INCREMENT,
+	contractId int not null,
+	interestInd DECIMAL(13,2) null,
+	capitalInd DECIMAL(13,2) null,
+	installmentDateDue date not null,
+	FOREIGN KEY (contractId) references LN_CONTRACT(id)
 );

@@ -53,9 +53,9 @@ public class Contract implements Serializable {
 	@Column(name = "loanPmentAmountDue", nullable = false)
 	private double loanPaymentAmountDue;
 
-	@Column(name = "loanPmentAmountDate", nullable = false)
-	private Date loanPaymentAmountDate;
-
+	@Column(name = "qttInstallments", nullable = false)
+	private int qttInstallments;
+	
 	public int getId() {
 		return this.id;
 	}
@@ -104,12 +104,12 @@ public class Contract implements Serializable {
 		this.loanPaymentAmountDue = loanPaymentAmountDue;
 	}
 
-	public Date getLoanPaymentAmountDate() {
-		return this.loanPaymentAmountDate;
+	public int getQttInstallments() {
+		return this.qttInstallments;
 	}
 
-	public void setLoanPaymentAmountDate(final Date loanPaymentAmountDate) {
-		this.loanPaymentAmountDate = loanPaymentAmountDate;
+	public void setQttInstallments(final int qttInstallments) {
+		this.qttInstallments = qttInstallments;
 	}
 
 	public Collector getCollector() {
@@ -123,9 +123,9 @@ public class Contract implements Serializable {
 	@Override
 	public String toString() {
 		return String.format(
-				"Contract [id=%s, customer=%s, collector=%s, startDate=%s, interestRate=%s, loanAmount=%s, loanPaymentAmountDue=%s, loanPaymentAmountDate=%s]",
+				"Contract [id=%s, customer=%s, collector=%s, startDate=%s, interestRate=%s, loanAmount=%s, loanPaymentAmountDue=%s, qttInstallments=%s]",
 				this.id, this.customer, this.collector, this.startDate, this.interestRate, this.loanAmount,
-				this.loanPaymentAmountDue, this.loanPaymentAmountDate);
+				this.loanPaymentAmountDue, this.qttInstallments);
 	}
 
 	@Override
@@ -135,12 +135,12 @@ public class Contract implements Serializable {
 		result = prime * result + ((this.collector == null) ? 0 : this.collector.hashCode());
 		result = prime * result + ((this.customer == null) ? 0 : this.customer.hashCode());
 		result = prime * result + this.id;
+		result = prime * result + this.qttInstallments;
 		long temp;
 		temp = Double.doubleToLongBits(this.interestRate);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		temp = Double.doubleToLongBits(this.loanAmount);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
-		result = prime * result + ((this.loanPaymentAmountDate == null) ? 0 : this.loanPaymentAmountDate.hashCode());
 		temp = Double.doubleToLongBits(this.loanPaymentAmountDue);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		result = prime * result + ((this.startDate == null) ? 0 : this.startDate.hashCode());
@@ -178,13 +178,9 @@ public class Contract implements Serializable {
 		if (Double.doubleToLongBits(this.loanAmount) != Double.doubleToLongBits(other.loanAmount)) {
 			return false;
 		}
-		if (this.loanPaymentAmountDate == null) {
-			if (other.loanPaymentAmountDate != null) {
+		if (this.qttInstallments != other.qttInstallments) {
 				return false;
 			}
-		} else if (!this.loanPaymentAmountDate.equals(other.loanPaymentAmountDate)) {
-			return false;
-		}
 		if (Double.doubleToLongBits(this.loanPaymentAmountDue) != Double.doubleToLongBits(other.loanPaymentAmountDue))
 			return false;
 		if (this.startDate == null) {

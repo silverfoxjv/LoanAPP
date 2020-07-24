@@ -33,17 +33,17 @@
 								
 							<div class="text-left h6 mb-3 font-weight-normal">Taxa de Juros</div>
 							<label for="inputInterest" class="sr-only">Valor de Capital</label> 
-							<input type="number" id="inputInterest" min="0" value="0" step="any" 
+							<input type="number" id="inputInterest" value="${contract.interstRate}" min="0" step="any" 
 								class="mb-3 form-control" placeholder="00.00" required>
 
 							<div class="text-left h6 mb-3 font-weight-normal">Valor do Empréstimo</div>
 							<label for="inputLoan" class="sr-only">Valor do Empréstimo</label> 
-							<input type="number" id="inputLoan" min="0" value="0" step="any"
+							<input type="number" id="inputLoan" value="${contract.loanAmount}" min="0" step="any"
 								class="mb-3 form-control" placeholder="00.00" required>
 								
 							<div class="text-left h6 mb-3 font-weight-normal">Quantidade de Parcelas</div>
 							<label for="inputQttInstallments" class="sr-only">Quantidade de Parcelas</label> 
-							<input type="number" id="inputQttInstallments" min="0" value="0"
+							<input type="number" id="inputQttInstallments" value="${contract.qttInstallments}" min="0"
 								class="mb-3 form-control" placeholder="0" required>
 								
 							<button class="btn btn-sm btn-outline-info btn-block mt-3"
